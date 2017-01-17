@@ -13,7 +13,11 @@ import {TransformQuery} from './transform';
 import {EncodingQuery} from './encoding';
 
 
-
+/**
+ * This interface follows the same structure as [Vega-Lite](https://github.com/vega/vega-lite)'s `UnitSpec`.
+ * The interface name has `Query` suffixes to hint that its instance (which can contain wildcards) is a query that describe a collection of specifications.
+ * Most interfaces under `SpecQuery` similarly describe a "query" version of directives in Vega-Lite.
+ */
 export interface SpecQuery {
   data?: Data;
   mark: Mark | EnumSpec<Mark> | ShortEnumSpec;

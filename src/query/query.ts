@@ -68,10 +68,13 @@ export function normalize(q: Query): Query {
 
 export interface Query {
   spec: SpecQuery;
-  nest?: Nest[];
+
   groupBy?: GroupBy;
+  nest?: Nest[];
+
   orderBy?: string | string[];
   chooseBy?: string | string[];
+
   config?: QueryConfig;
 }
 
